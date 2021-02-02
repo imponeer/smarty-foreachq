@@ -1,5 +1,5 @@
 [![License](https://img.shields.io/github/license/imponeer/smarty-foreachq.svg)](LICENSE)
-[![GitHub release](https://img.shields.io/github/release/imponeer/smarty-foreachq.svg)](https://github.com/imponeer/smarty-foreachq/releases) [![Maintainability](https://api.codeclimate.com/v1/badges/79f89e2fe21c0076c29a/maintainability)](https://codeclimate.com/github/imponeer/smarty-foreachq/maintainability) [![PHP](https://img.shields.io/packagist/php-v/imponeer/smarty-foreachq.svg)](http://php.net) 
+[![GitHub release](https://img.shields.io/github/release/imponeer/smarty-foreachq.svg)](https://github.com/imponeer/smarty-foreachq/releases) [![Maintainability](https://api.codeclimate.com/v1/badges/05e38f936681d6b4c462/maintainability)](https://codeclimate.com/github/imponeer/smarty-foreachq/maintainability) [![PHP](https://img.shields.io/packagist/php-v/imponeer/smarty-foreachq.svg)](http://php.net) 
 [![Packagist](https://img.shields.io/packagist/dm/imponeer/smarty-foreachq.svg)](https://packagist.org/packages/imponeer/smarty-foreachq)
 
 # Smarty ForeachQ
