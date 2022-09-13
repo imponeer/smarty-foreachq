@@ -11,7 +11,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
       time: "11:00"
     labels:
       - "dependencies"
