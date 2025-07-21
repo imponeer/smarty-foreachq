@@ -2,6 +2,8 @@
 
 namespace Imponeer\Smarty\Extensions\ForeachQ;
 
+use Imponeer\Smarty\Extensions\ForeachQ\CompilerTag\ForeachQCloseCompilerTag;
+use Imponeer\Smarty\Extensions\ForeachQ\CompilerTag\ForeachQCompilerTag;
 use Smarty\Compile\CompilerInterface;
 use Smarty\Extension\Base;
 
