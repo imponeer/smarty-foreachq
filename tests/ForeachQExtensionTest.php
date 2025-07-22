@@ -1,13 +1,16 @@
 <?php
 
+namespace Imponeer\Smarty\Extensions\ForeachQ\Tests;
+
 use Imponeer\Smarty\Extensions\ForeachQ\ForeachQExtension;
+use Override;
 use PHPUnit\Framework\TestCase;
+use Smarty\Exception;
 use Smarty\Smarty;
 use org\bovigo\vfs\vfsStream;
 
 class ForeachQExtensionTest extends TestCase
 {
-
     private Smarty $smarty;
 
     /**
@@ -41,7 +44,7 @@ class ForeachQExtensionTest extends TestCase
     }
 
     /**
-     * @throws \Smarty\Exception
+     * @throws Exception
      */
     public function testForeachQInMemory(): void
     {
@@ -54,11 +57,15 @@ class ForeachQExtensionTest extends TestCase
     }
 
     /**
-     * @throws \Smarty\Exception
+     * @throws Exception
      */
     public function testForeachQWithTemplateFile(): void
     {
-        $templateContent = '{foreachq from=$items item=item}{$item.name}: {$item.value}{if !$item@last}, {/if}{/foreachq}';
+        $templateContent = <<<'EOF'
+        {foreachq from=$items item=item}
+            {$item.name}: {$item.value}{if !$item@last}, {/if}
+        {/foreachq}
+        EOF;
         file_put_contents(vfsStream::url('smarty_test/templates/test_template.tpl'), $templateContent);
 
         $this->smarty->assign('items', [
@@ -68,11 +75,11 @@ class ForeachQExtensionTest extends TestCase
         ]);
 
         $result = $this->smarty->fetch('test_template.tpl');
-        $this->assertEquals('first: A, second: B, third: C', $result);
+        $this->assertEquals('    first: A,     second: B,     third: C', $result);
     }
 
     /**
-     * @throws \Smarty\Exception
+     * @throws Exception
      */
     public function testForeachQWithNestedArrays(): void
     {
@@ -99,5 +106,4 @@ class ForeachQExtensionTest extends TestCase
         $expected = 'Category: Fruits - Apple - Banana|Category: Vegetables - Carrot - Broccoli';
         $this->assertEquals($expected, $result);
     }
-
 }

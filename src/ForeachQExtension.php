@@ -9,7 +9,6 @@ use Smarty\Extension\Base;
 
 class ForeachQExtension extends Base
 {
-
     public function getTagCompiler(string $tag): ?CompilerInterface
     {
         return match ($tag) {
@@ -18,7 +17,4 @@ class ForeachQExtension extends Base
             default => null,
         };
     }
-
-
-
 }
