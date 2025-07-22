@@ -6,6 +6,4 @@ use Smarty\Compile\Tag\ForeachTag;
 
 class ForeachQCompilerTag extends ForeachTag
 {
-
-
 }

@@ -6,5 +6,4 @@ use Smarty\Compile\Tag\ForeachClose;
 
 class ForeachQCloseCompilerTag extends ForeachClose
 {
-
 }
